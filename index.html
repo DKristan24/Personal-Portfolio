@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Main Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 1.15rem;
+      color: #f2e7dc;
+      line-height: 1.7;
+      background: url('https://wallpaperaccess.com/full/23015.jpg') no-repeat center center fixed;
+      background-size: cover;
+      background-color: #000; 
+      padding-top: 140px;
+    }
+  
+    h2, h3, h4 {
+      color: #ffe5b4;
+      font-family: 'Trebuchet MS', sans-serif;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid #A1887F;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+  
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+    }
+  
+    h4 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #ffccbc;
+    }
+  
+    p {
+      margin-bottom: 1rem;
+      color: #f5f5f5;
+    }
+  
+    ul {
+      padding-left: 1.2rem;
+      color: #f1f1f1;
+    }
+  
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+  
+    nav {
+      background-color: #A1887F;
+      color: white;
+      padding: 2rem 0;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+  
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 700;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+  
+    nav a:hover {
+      background-color: #7B5B4A;
+      transform: scale(1.1);
+    }
+  
+    .head-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+      justify-content: space-between;
+    }
+  
+    .left-column, .right-column {
+      flex: 1;
+      min-width: 320px;
+    }
+  
+    .name-block {
+      font-size: 4rem;
+      font-weight: bold;
+      padding: 1.5rem;
+      background-color: #D7CCC8;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      margin-bottom: 1rem;
+      text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+      color: #3E2723;
+    }
+
+    .bio-data {
+      background-color: rgba(190, 190, 190, 1); 
+      padding: 1.5rem;
+      margin-top: 1rem;
+      border-radius: 0.5rem;
+      color: #3E2723;
+    }
+
+    .bio-data p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: #3E2723;
+    }
+  
+    .profile-pic-container {
+      background-color: #BDBDBD;
+      border-radius: 50%;
+      width: 550px;
+      height: 550px;
+      overflow: hidden;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .profile-pic-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .Career-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 500;
+      background-color: #8D6E63;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      margin-top: 1rem;
+      text-shadow: 1px 1px 2px #3E2723;
+    }
+  
+    .Section-title {
+      background-color: #A1887F;
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px #4E342E;
+      border-radius: 0.5rem;
+    }
+  
+    .body-section-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+  
+    .center-box {
+      background-color: rgba(75, 85, 99, 0.9);
+      color: #fff;
+      flex: 1;
+      min-width: 300px;
+      max-width: 900px;
+      padding: 2rem;
+      border-radius: 0.8rem;
+      text-align: center;
+    }
+  
+    .center-box h2,
+    .center-box h3,
+    .center-box h4 {
+      margin-top: 0;
+      color: #ffd8a8;
+    }
+  
+    .footer {
+      margin-top: 4rem;
+    }
+  
+    .footer-content {
+      background-color: #4b5563;
+      color: white;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 2rem;
+    }
+  
+    @media (max-width: 768px) {
+      .head-section {
+        padding: 2rem 1rem;
+      }
+  
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+  
+      .profile-pic-container {
+        width: 300px;
+        height: 300px;
+      }
+  
+      .name-block {
+        font-size: 3rem;
+      }
+  
+      .Career-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>  
+</head>
+<body>
+
+  <!-- Navigation Section -->
+  <nav>
+    <ul>
+      <li><a href="#head-section">Home</a></li>
+      <li><a href="#background-section">Background</a></li>
+      <li><a href="#footer-section">Copyright</a></li>
+      <li><a href="experiences.html">Experience</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Head Section -->
+  <header class="head-section" id="head-section">
+    <div class="left-column">
+      <div class="name-block">KRISTAN ED T. DOLORITO</div>
+      <div class="bio-data">
+        A 20-year-old freelance programmer with a degree in Computer Science. Passionate about learning, adapting, and refining skills in software development to grow professionally and contribute meaningfully.
+      </div>
+      <div class="bio-data">
+        <p>Place of Birth: Quezon City, NCR, Philippines</p>
+        <p>Birthdate: December 24, 2004</p>
+        <p>Gender: Male</p>
+        <p>Marital Status: Single</p>
+        <p>Nationality: Filipino</p>
+        <p>Current Address: 21 General Luis Street, Nagkaisang Nayon, Novaliches, Quezon City, NCR, Philippines</p>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="profile-pic-container">
+        <img src="ProPIc.jpg" alt="Profile Picture" />
+      </div>
+      <div class="Career-title">Freelance Programmer</div>
+    </div>
+</header>
+
+  <!-- Body Section -->
+  <main class="body-section" id="background-section">
+    <div class="Section-title">Background</div>
+
+    <div class="body-section-content">
+  <div class="center-box">
+    <h2>Education</h2>
+    <h4>Bachelor of Science in Computer Science</h4>
+    <ul><li>Our Lady of Fatima University | 2022–2028</li></ul>
+    <h4>STEM Strand – SHS</h4>
+    <ul><li>International Christian School | 2021–2022</li></ul>
+    <h4>Junior High School</h4>
+    <ul><li>International Christian School | 2017–2020</li></ul>
+    <h4>Primary Education</h4>
+    <ul><li>International Christian School | 2010–2016</li></ul>
+  </div>
+</div>
+
+<div class="body-section-content">
+  <div class="center-box">
+    <h2>Program Certifications</h2>
+    <ul>
+      <li><strong>CodinGame Java</strong> – DICT, Dec 16, 2024</li>
+      <li><strong>CodinGame C++</strong> – DICT, Apr 10, 2025</li>
+    </ul>
+    <h2>Programming Languages Proficiency</h2>
+    <ul>
+      <li><strong>C++</strong></li>
+      <li><strong>C#</strong></li>
+      <li><strong>HTML and CSS</strong></li>
+      <li><strong>Java</strong></li>
+      <li><strong>Python</strong></li>
+    </ul>
+  </div>
+</div>
+
+<div class="body-section-content">
+  <div class="center-box">
+    <h2>Skills</h2>
+    <h3>Technical (Hard) Skills</h3>
+    <ul>
+      <li>Software Development</li>
+      <li>Database Management</li>
+      <li>Web Development</li>
+      <li>API Integration</li>
+      <li>OOP</li>
+    </ul>
+    <h3>Soft Skills</h3>
+    <ul>
+      <li>Communication</li>
+      <li>Adaptability</li>
+      <li>Problem Solving</li>
+      <li>Critical Thinking</li>
+    </ul>
+  </div>
+</div>
+
+<div class="body-section-content">
+  <div class="center-box">
+    <h2>Capabilities</h2>
+    <p>
+      I am proficient in SQL, Linux, Java, Python, Java GUI, HTML, CSS, C++, and C#. I have experience in database management with SQL, 
+      system administration using Linux, and backend and GUI development in Java. 
+      I also create efficient applications in Python, design responsive web pages with HTML and CSS, 
+      and build high-performance software in C++ and C#. My diverse skill set allows me to approach projects from multiple technical perspectives.
+    </p>
+    <p>
+      I also futher have a strong understanding of data structures and algorithms, enabling me to solve complex problems with optimized solutions. 
+      Furthermore, I am committed to writing clean, maintainable code, collaborating with teams, and staying up-to-date with the latest industry trends and technologies to continually improve my technical capabilities. 
+      This versatility makes me a valuable asset for any development team or project.
+    </p>
+  </div>
+
+<!-- Footer Section -->
+</div>
+  <footer>
+    <section class="footer-section" id="footer-section">
+      <div class="Section-title">Copyright</div>
+      <div class="footer-content">
+        &copy; 2025 Kristan Ed T. Dolorito. 
+        All rights reserved. 
+        This page is protected and may not be duplicated without permission.
+      </div>
+    </section>
+  </footer>
+
+</body>
+</html>
